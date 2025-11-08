@@ -1,3 +1,20 @@
 /pvrgetaway_backup.html
 /pvrgetaway_clean.html
 /pvrscripts.js
+
+# Large video files
+assets/hotel-delfin-compressed.mp4
+assets/hotel-delfin-compressed.mp4.zip
+assets/*.mp4
+assets/*.zip
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Node modules
+node_modules/
+
+# Build files
+dist/
+build/
