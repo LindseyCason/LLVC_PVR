@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Custom Tailwind Configuration */
+:root {
+    --color-primary: #f97316;
+    --color-secondary: #ea580c;
+    --color-accent: #fb923c;
+    --color-text-light: #fef3f7;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #fef3f7 0%, #f3e8ff 50%, #fef3f7 100%); /* Pink to Purple gradient background */
+    color: #374151;
+    min-height: 100vh;
+}
+
+.hero-section {
+    background-image: url('../assets/bannerimagepvr.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    z-index: 1; /* Ensure content is above background */
+    height: 400px; /* Set a fixed height for the hero section */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    align-items: flex-end; /* Align content to bottom */
+}
+
+/* Ensure content is positioned correctly relative to the overlay */
+.hero-section > .max-w-7xl {
+    position: relative;
+    z-index: 10;
+}
+
+/* Specific override for white text on dark primary buttons for visibility */
+.bg-primary {
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.bg-primary:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.6), 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05) translateY(-2px);
+}
+
+/* Vibrant section backgrounds */
+.main-content-section {
+    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+    color: white;
+}
+
+.newsletter-section {
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+}
+
+.newsletter-section .bg-white {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Add vibrant header background */
+header {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.95) 0%, rgba(139, 92, 246, 0.95) 100%) !important;
+    backdrop-filter: blur(10px);
+}
+
+header .text-primary {
+    color: white !important;
+}
+
+header .text-secondary {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+header .hover\:text-primary:hover {
+    color: #f472b6 !important;
+}
+
+/* Footer styling */
+footer {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%) !important;
+}
